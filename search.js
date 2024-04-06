@@ -14,4 +14,3 @@ function initMap() {
   
     marker.setMap(map); 
 }
-  
