@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Header Example</title>
+<style>
+  /* CSS for the header */
+  header {
+    background-color: rgb(114, 186, 120); /* Set the background color to blue */
+    padding: 10px; /* Add some padding for better visual */
+    height: 50px;
+    font-size: 30px;
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+  }
+
+  nav {
+    display: flex; /* Make the tabs align horizontally */
+  }
+
+  nav a {
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Add padding to each tab */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+
+  nav a:hover {
+    background-color: rgb(95, 160, 77); /* Change background color on hover */
+    height: 70px;
+  }
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&family=Rubik+Scribble&display=swap" rel="stylesheet">
+</style>
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Search</a>
+    <a href="#">Contact Us</a>
+  </nav>
+</header>
+
+<body>
+  
+<h1 class= "search">Search a Resturant </h1>
+<h3> please type in your zipcode</h3>
+
+<!-- Get data from user (zipcode and address)-->
+<label>ZIP Code: </label>
+<input type="text" id = "zipcode"> <br><br>
+<label>Address: </label>
+<input type="text" id = "address"> <br><br>
+<input type="file" id = "csvFile" accept=".csv"> <br><br>
+
+<!-- <input type="submit" onclick = myMap() /> -->
+<button class = "subbot" onclick = myMap()> submit </button>
+
+
+
+
+<div id="googleMap" style="width:100%;height:1000px;"></div>
+
+<script>
+  function myMap() {
+
+// Diddy Riese location (for now)
+const loc_Diddy_Riese = new google.maps.LatLng(34.063050026926234, -118.44685020759215);
+var mapProp= {
+  center: loc_Diddy_Riese,
+  zoom: 50,
+};
+
+// Define a map variable
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+// Define a Marker variable
+var marker = new google.maps.Marker({position: loc_Diddy_Riese});
+
+marker.setMap(map); 
+}
+</script>
+
+<!-- Calls the Google Map API to display the map item-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZn97dQcuirL7P1pkLLfRp9J7r56SPUys&callback=myMap"></script>
+
+</body>
+</html> 
+
+
+// css styles.css
+
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #eceddd;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #eceddd;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #eceddd;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #eceddd;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+.search{
+text-align: center;
+
+}
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #eceddd;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+.search {
+text-align: center;
+
+color: rgb(62, 61, 61);
+}
+
+body {
+
+    background-color: #eceddd;
+    text-align: center;
+
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+
+
+}
+
+.subbot{
+    background-color: white; /* White background */
+    border: 2px solid rgb(95, 160, 77); /* Black border */
+    color: rgb(95, 160, 77); /* Black text */
+    font-family: Arial, sans-serif; /* Night font */
+    font-weight: bold; /* Bold font weight */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+  }
+
+  /* Hover effect */
+  .subbot:hover {
+    background-color: rgb(95, 160, 77); /* Black background on hover */
+    color: white; /* White text on hover */
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+  }
+
+
+
