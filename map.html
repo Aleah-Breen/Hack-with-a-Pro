@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Location of the restaurant</h1>
+
+<div id="googleMap" style="width:100%;height:1000px;"></div>
+
+<script>
+function myMap() {
+  // Diddy Riese location (for now)
+  const loc_Diddy_Riese = new google.maps.LatLng(34.063050026926234, -118.44685020759215);
+  var mapProp= {
+    center: loc,
+    zoom: 50,
+  };
+
+  // Define a map variable
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    
+  var marker = new google.maps.Marker({position: loc});
+
+  marker.setMap(map); 
+  }
+</script>
+
+<!-- Calls the Google Map API to display the map item-->>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZn97dQcuirL7P1pkLLfRp9J7r56SPUys&callback=myMap"></script>
+
+</body>
+</html> 
