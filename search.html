@@ -3,20 +3,23 @@
 <body>
 
 <h1>Location of the restaurant</h1>
-
 <!-- Get data from user (zipcode and address)-->
-<label>ZIP Code: </label>
-<input type="text" id = "zipcode"> <br><br>
-<label>Address: </label>
-<input type="text" id = "address"> <br><br>
-<input type="submit">
-<div id="googleMap" style="width:50%;height:1000px;"></div>
+<form>
+  <!-- <label>ZIP Code: </label>
+  <input type="text" id = "zipcode"> <br><br> -->
+  <label>Address: </label>
+  <input type="text" id = "address"> <br><br>
+  <input type="submit" onclick="retrieveData();">
+</form>
+
+<div id="googleMap" style="width:50%;height:500px;"></div>
 
 <!-- Calls search logic -->
 <script src="search.js"> </script>
 
-Calls the Google Map API to display the map item
+<!-- Calls the Google Map API to display the map item -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZn97dQcuirL7P1pkLLfRp9J7r56SPUys&callback=initMap"></script>
+
 
 </body>
 </html> 
