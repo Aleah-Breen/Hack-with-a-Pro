@@ -1,6 +1,5 @@
 
 let address = localStorage.getItem('address');
-
 function retrieveData() {
     // Allows usage outside of program
     var address = document.getElementById("address").value;
@@ -9,12 +8,10 @@ function retrieveData() {
 
 function initMap() {
     geocoder = new google.maps.Geocoder();
-
     geocoder.geocode({
         address: address}, (results, status) => {
         if (status == google.maps.GeocoderStatus.OK) {
-            locLoc = results[0].geometry.location;
-            localStorage.setItem('locLoc', locLoc);
+            var locLoc = results[0].geometry.location;
             var marker = new google.maps.Marker(
                 {
                     map: map,
