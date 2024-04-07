@@ -90,7 +90,7 @@
         <a href="index.html">Home</a>
         <a href="search.html">Search</a>
         <a href="restaurants.html">Near Me</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="Contact Us">Contact Us</a>
     </nav>
     <div class="container">
         <!-- Search bar -->
