@@ -13,10 +13,12 @@ function initMap() {
     geocoder.geocode({
         address: address}, (results, status) => {
         if (status == google.maps.GeocoderStatus.OK) {
+            locLoc = results[0].geometry.location;
+            localStorage.setItem('locLoc', locLoc);
             var marker = new google.maps.Marker(
                 {
                     map: map,
-                    position: results[0].geometry.location,
+                    position: locLoc,
                 }
             )
         }
@@ -28,31 +30,30 @@ function initMap() {
       center: loc_Diddy_Riese,
       zoom: 15,
     };
-  
+
     // Define a map variable
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-    // Define a Marker variable for Diddy Riese
-    var marker = new google.maps.Marker(
-        { 
-            map: map,
-            position: loc_Diddy_Riese,
-        }
-    );
 
     // Given an address, put a Marker of the address on the Google Map
     // In-N-Out Burger
     var addressDummy = "922 Gayley Ave, Los Angeles, CA 90024";
-    geocoder.geocode({
-        address: addressDummy}, (results, status) => {
-        if (status == google.maps.GeocoderStatus.OK) {
-            var marker = new google.maps.Marker(
-                {
-                    map: map,
-                    position: results[0].geometry.location,
-                }
-            )
-        }
-    });
+    var addressDummy2 = "1051 Broxton Ave, Los Angeles, CA 90024";
+    var addressDummy3 = "1060 Tiverton Ave, Westwood Village, CA 90024";
+    var addressList = [addressDummy,addressDummy2, addressDummy3];
 
+    for (var i = 0; i < addressList.length; i++)
+    {
+        geocoder.geocode({
+            address: addressList[i]}, (results, status) => {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var marker = new google.maps.Marker(
+                    {
+                        map: map,
+                        position: results[0].geometry.location,
+                    }
+                )
+            }
+        });
+    
+    }
 }
