@@ -80,10 +80,9 @@
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="search.html">Search</a>
-        <a href="restaurants.html">Near Me</a>
-        <a href="requests.html">Requests</a>
-        <a href="#">Contact Us</a>
+    <a href="search.html">Search</a>
+    <a href="restaurants.html">Near Me</a>
+    <a href="contact.html">Contact Us</a>
     </nav>
     <div class="container">
         <div class="restaurant-card">
@@ -122,7 +121,8 @@
     <script>
         function disableButton(btn) {
             btn.classList.add("disabled");
-            btn.setAttribute("onclick", "return false;");
+            btn.textContent = "Status: Waiting";
+            btn.removeAttribute("onclick");
         }
     </script>
 </body>
