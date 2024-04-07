@@ -1,0 +1,141 @@
+<link rel="import" href="home.html">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Header Example</title>
+<style>
+  /* CSS for the header */
+    header {
+            background-color: #ffedd6;
+            color: #72ba78;
+            padding: 10px 0;
+            text-align: center;
+
+     }
+    nav {
+        background-color: #72ba78;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 10px;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    footer {
+        background-color: #72ba78;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&family=Rubik+Scribble&display=swap" rel="stylesheet">
+</style>
+</head>
+<link rel="stylesheet" href="styles.css">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Search</a>
+    <a href="#">Contact Us</a>
+  </nav>
+</header>
+<body>
+<h1 class="firstheader"> Contact Us </h1>
+<h4>Do not be afarid to contact us by clicking the links below which will guide you to our company phone number and email. We have customer service available 24/7</h4>
+
+
+
+
+<span>&#9742;</span>
+
+
+<span>&#9993;</span>
+
+
+<h2 class = "moveup" >  Call  Email </h2>
+
+
+
+</body>
+</html> 
+
+
+
+
+
+//css
+  .phone-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .phone-icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+  }
+  
+  .phone-icon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #000;
+    border-radius: 50%;
+  }
+
+
+
+  span {
+    content: "\260E";
+    font-size: 120px;;
+    margin-top: 140px;
+  }
+
+
+
+  span {
+    content: "\2709";
+    margin-top: 140px;
+  }
+
+
+  .moveup{
+
+    vertical-align: -0.5em;
+
+  }
+  
+  .instaimg{
+    width: 20px;
+    height: 20px;
+
+
+  }
+
+  .twitterimg{
+    width: 200px;
+    height: 5px;
+  }
