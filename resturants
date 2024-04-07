@@ -72,7 +72,7 @@
             background-color: #0056b3;
         }
         .btn.disabled {
-            opacity: 0.5;
+            opacity: 0.0;
             cursor: not-allowed;
         }
     </style>
@@ -93,6 +93,8 @@
                 <li><strong>Hours:</strong> 11:00 PM</li>
             </ul>
             <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
+            <li><strong>Request Status:</strong> Waiting</li>
+
         </div>
 
         <div class="restaurant-card">
@@ -103,6 +105,7 @@
                 <li><strong>Hours:</strong> 12:00 AM</li>
             </ul>
             <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
+            <li><strong>Request Status:</strong> Waiting</li>
         </div>
 
         <div class="restaurant-card">
@@ -113,6 +116,7 @@
                 <li><strong>Hours:</strong> 11:00 PM</li>
             </ul>
             <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
+            <li><strong>Request Status:</strong> Waiting</li>
         </div>
         <!-- Add more restaurant cards as needed -->
 

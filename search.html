@@ -1,8 +1,56 @@
+
 <!DOCTYPE html>
 <html>
-<body>
 
-<h1>Location of the restaurant</h1>
+<head>
+  <title>Header Example</title>
+  <style>
+    /* CSS for the header */
+      header {
+              background-color: #ffedd6;
+              color: #72ba78;
+              padding: 10px 0;
+              text-align: center;
+  
+       }
+      nav {
+          background-color: #72ba78;
+          padding: 10px 0;
+          text-align: center;
+      }
+      nav a {
+          color: #fff;
+          text-decoration: none;
+          padding: 0 10px;
+      }
+      nav a:hover {
+          text-decoration: underline;
+      }
+      footer {
+          background-color: #72ba78;
+          color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&family=Rubik+Scribble&display=swap" rel="stylesheet">
+  </style>
+  </head>
+  <link rel="stylesheet" href="styles.css">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Search</a>
+      <a href="resturants"> Near Me</a>
+      <a href="#">Contact Us</a>
+    </nav>
+  </header>
+
+<body>
 <!-- Get data from user (zipcode and address)-->
 <form>
   <!-- <label>ZIP Code: </label>
@@ -19,5 +67,8 @@
 
 <!-- Calls the Google Map API to display the map item -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZn97dQcuirL7P1pkLLfRp9J7r56SPUys&callback=initMap"></script>
+<footer>
+    <p>&copy; 2024 Your Website. All rights reserved.</p>
+</footer>
 </body>
 </html> 
