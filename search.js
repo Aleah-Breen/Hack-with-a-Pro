@@ -8,6 +8,20 @@ function retrieveData() {
 }
 
 function initMap() {
+    geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({
+        address: address}, (results, status) => {
+        if (status == google.maps.GeocoderStatus.OK) {
+            var marker = new google.maps.Marker(
+                {
+                    map: map,
+                    position: results[0].geometry.location,
+                }
+            )
+        }
+    });
+
     // Diddy Riese data (for now)
     const loc_Diddy_Riese = new google.maps.LatLng(34.063050026926234, -118.44685020759215);
     var mapProp= {
@@ -27,9 +41,8 @@ function initMap() {
     );
 
     // Given an address, put a Marker of the address on the Google Map
-    // var addressDummy = "922 Gayley Ave, Los Angeles, CA 90024";
-    var addressDummy = address;
-    geocoder = new google.maps.Geocoder();
+    // In-N-Out Burger
+    var addressDummy = "922 Gayley Ave, Los Angeles, CA 90024";
     geocoder.geocode({
         address: addressDummy}, (results, status) => {
         if (status == google.maps.GeocoderStatus.OK) {
@@ -41,4 +54,5 @@ function initMap() {
             )
         }
     });
+
 }
