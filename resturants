@@ -72,19 +72,30 @@
             background-color: #0056b3;
         }
         .btn.disabled {
-            opacity: 0.0;
+            opacity: 0.5;
             cursor: not-allowed;
+        }
+        #searchInput {
+            width: 95%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
-    <a href="search.html">Search</a>
-    <a href="restaurants.html">Near Me</a>
-    <a href="contact.html">Contact Us</a>
+        <a href="search.html">Search</a>
+        <a href="restaurants.html">Near Me</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
     <div class="container">
+        <!-- Search bar -->
+        <input type="text" id="searchInput" placeholder="Search for restaurants...">
+        
         <div class="restaurant-card">
             <h1><img src="MDLogo.png" alt="Restaurant 1 Logo"> McDonalds</h1>
             <ul>
@@ -93,8 +104,6 @@
                 <li><strong>Hours:</strong> 11:00 PM</li>
             </ul>
             <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
-            <li><strong>Request Status:</strong> Waiting</li>
-
         </div>
 
         <div class="restaurant-card">
@@ -105,7 +114,6 @@
                 <li><strong>Hours:</strong> 12:00 AM</li>
             </ul>
             <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
-            <li><strong>Request Status:</strong> Waiting</li>
         </div>
 
         <div class="restaurant-card">
@@ -116,7 +124,6 @@
                 <li><strong>Hours:</strong> 11:00 PM</li>
             </ul>
             <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
-            <li><strong>Request Status:</strong> Waiting</li>
         </div>
         <!-- Add more restaurant cards as needed -->
 
@@ -128,6 +135,21 @@
             btn.textContent = "Status: Waiting";
             btn.removeAttribute("onclick");
         }
+
+        // Filter restaurants based on search input
+        document.getElementById("searchInput").addEventListener("input", function() {
+            var searchValue = this.value.toLowerCase();
+            var restaurantCards = document.querySelectorAll(".restaurant-card");
+            
+            restaurantCards.forEach(function(card) {
+                var restaurantName = card.querySelector("h1").textContent.toLowerCase();
+                if (restaurantName.indexOf(searchValue) > -1) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
     </script>
 </body>
 </html>
