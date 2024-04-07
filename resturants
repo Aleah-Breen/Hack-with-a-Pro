@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Information</title>
+    <style>
+        body {
+            font-family: "Reddit Mono", monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #72ba78;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .restaurant-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        h1 img {
+            margin-right: 10px;
+            max-width: 50px;
+            max-height: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="restaurants.html">Near Me</a>
+        <a href="requests.html">Requests</a>
+        <a href="#">Contact Us</a>
+    </nav>
+    <div class="container">
+        <div class="restaurant-card">
+            <h1><img src="MDLogo.png" alt="Restaurant 1 Logo"> McDonalds</h1>
+            <ul>
+                <li><strong>Reduced Price:</strong> $12.00</li>
+                <li><strong>Location:</strong> 10451 Santa Monica Blvd, Los Angeles, CA 90025</li>
+                <li><strong>Hours:</strong> 11:00 PM</li>
+            </ul>
+            <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
+        </div>
+
+        <div class="restaurant-card">
+            <h1><img src="TBLogo.png" alt="Restaurant 2 Logo"> Taco Bell</h1>
+            <ul>
+                <li><strong>Reduced Price:</strong> $10.00</li>
+                <li><strong>Location:</strong> 10937 Weyburn Ave, Los Angeles, CA 90024</li>
+                <li><strong>Hours:</strong> 12:00 AM</li>
+            </ul>
+            <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
+        </div>
+
+        <div class="restaurant-card">
+            <h1><img src="CHLogo.png" alt="Restaurant 3 Logo"> Chipotle</h1>
+            <ul>
+                <li><strong>Reduced Price:</strong> $15.00</li>
+                <li><strong>Location:</strong> 1077 Broxton Ave, Los Angeles, CA 90024</li>
+                <li><strong>Hours:</strong> 11:00 PM</li>
+            </ul>
+            <a href="#" class="btn" onclick="disableButton(this)">Request Leftovers</a>
+        </div>
+        <!-- Add more restaurant cards as needed -->
+
+    </div>
+
+    <script>
+        function disableButton(btn) {
+            btn.classList.add("disabled");
+            btn.setAttribute("onclick", "return false;");
+        }
+    </script>
+</body>
+</html>
